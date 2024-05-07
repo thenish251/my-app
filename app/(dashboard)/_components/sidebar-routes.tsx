@@ -1,6 +1,8 @@
 'use strict';
+import dynamic from 'next/dynamic'; 
 import { Compass, Layout } from "lucide-react";
-import  SidebarItem  from "./sidebar-item";
+// import  SidebarItem  from "./sidebar-item";
+const SidebarItem = dynamic(() => import('./sidebar-item'), { ssr: false });
 
 const guestRoutes = [{
     icon: Layout,
